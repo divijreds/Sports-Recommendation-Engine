@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'main.css') }}">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+{% endblock %}
+
+{% block content %}
+
+    <div class="asplitl aleft">
+        <img src="static/about.svg" class="aboutimg" alt="About Us SVG">
+    </div>
+<!------------------------------------------------------------------------------------------------------------------------------> 
+    <!--<div class = "avertical"></div>-->
+<!------------------------------------------------------------------------------------------------------------------------------> 
+    <div class="asplitr aright">
+        <!--<div class="centered"></div>-->
+        <h1 class="mt-4" style="color: black; font-size: 28px;"><span style="font-size: 28px;" class="fas fa-users"></span>&nbsp;&nbsp;ABOUT US...</h1><br>
+        <div class="w3-panel w3-grey w3-round-large">
+            <p style="margin-top: 14px; text-align: justify;">
+                Welcome to R.E.F.C !<br><br> Recommendation Engine for Cricket or R.E.F.C is a web platform that would help in selecting best players for 
+                our team. Recommendation Engines are applications or softwares that assess the existing past data and provide a 
+                recommendation or suggestion for the future choices. This recommendation engine will look at the data of past
+                performances of players and will recommend suitable players based on the match conditions of the upcoming match. The 
+                match conditions could include type of pitch and weather conditions.
+                This platform will provide the selectors with a probable team and will help them to make the team selection process
+                more efficient, easy and quick. We are updating the engine efficiency continuously and are trying to provide the
+                authorities more insight in the selection process.
+            </p>
+        </div>
+    </div>
+<!------------------------------------------------------------------------------------------------------------------------------>
+{% endblock content %}

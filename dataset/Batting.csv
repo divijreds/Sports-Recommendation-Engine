@@ -1,0 +1,33 @@
+Player,Role,BattingStyle,Span,Matches,Innings,NotOut,Runs,HighScore,Average,BF,SR,Hundreds,Fifties,Fours,Ct,St
+MA Agarwal,Batsman,Right-hand bat,2020-2020,5,5,0,86,32,17.2,83,103.61,0,0,12,7,0
+Khaleel Ahmed,Bowler,Right-hand bat,2018-2019,11,3,1,9,5,4.5,17,52.94,0,0,1,0,0
+Jasprit Bumrah,Bowler,Right-hand bat,2016-2020,67,17,11,19,10*,3.16,49,38.77,0,0,2,0,0
+Yuzvendra Chahal,Bowler,Right-hand bat,2016-2020,54,10,4,53,18*,8.83,90,58.88,0,0,7,0,0
+Deepak Chahar,Bowler,Right-hand bat,2018-2019,3,2,1,18,12,18,22,81.81,0,0,1,0,0
+Shikhar Dhawan,Batsman,Left-hand bat,2010-2020,139,136,7,5808,143,45.02,6186,93.88,17,30,727,18,0
+Shivam Dube,Allrounder,Left-hand bat,2019-2019,1,1,0,9,9,9,6,150,0,0,1,0,0
+Shreyas Iyer,Batsman,Right-hand bat,2017-2020,21,19,1,807,103,44.83,801,100.74,1,8,80,29,0
+Ravindra Jadeja,Allrounder,Left-hand bat,2009-2020,168,113,39,2411,87,32.58,2769,87.07,0,13,178,0,0
+Kedar Jadhav,Batting-allrounder,Right-hand bat,2014-2020,73,52,19,1389,120,42.09,1367,101.6,2,6,141,6,0
+Dinesh Karthik,Wicket Keeper Batsman,Right-hand bat,2004-2019,94,79,21,1752,79,30.2,2392,73.24,0,9,176,14,10
+Virat Kohli,Batsman,Right-hand bat,2008-2020,251,242,39,12040,183,59.31,12912,93.24,43,60,1130,50,0
+Kuldeep Yadav,Bowler,Left-hand bat,2017-2020,61,21,12,118,19,13.11,188,62.76,0,0,10,0,0
+Bhuvneshwar Kumar,Bowler,Right-hand bat,2012-2019,114,52,15,526,53*,14.21,703,74.82,0,1,44,0,0
+Mohammed Shami,Bowler,Right-hand bat,2013-2020,79,38,17,161,25,7.66,194,82.98,0,0,12,0,0
+Mohammed Siraj,Bowler,Right-hand bat,2019-2019,1,0,0,0,0,0,0,0,0,0,0,0,0
+Thangarasu Natarajan,Bowler,Left-hand bat,2020-2020,1,0,0,0,0,0,0,0,0,0,0,0,0
+Manish Pandey,Batsman,Right-hand bat,2015-2020,26,21,7,492,104*,35.14,535,91.96,1,2,41,16,0
+Hardik Pandya,Allrounder,Right-hand bat,2016-2020,57,41,7,1167,92*,34.32,1011,115.43,0,6,84,0,0
+Rishabh Pant,Wicket Keeper Batsman,Left-hand bat,2018-2020,28,27,0,1200,71,44.44,1158,103.6,1,5,40,16,18
+KL Rahul,Batsman,Right-hand bat,2016-2020,35,34,5,1332,112,45.93,1515,87.92,4,8,103,26,0
+Ambati Rayudu,Batsman,Right-hand bat,2013-2019,55,50,14,1694,124*,47.05,2143,79.04,3,10,145,11,0
+Navdeep Saini,Bowler,Right-hand bat,2019-2020,7,4,3,92,45,92,100,92,0,0,9,0,0
+Vijay Shankar,Allrounder,Right-hand bat,2019-2019,12,8,1,223,46,31.85,246,90.65,0,0,20,0,0
+Rohit Sharma,Batsman,Right-hand bat,2007-2020,224,217,32,9115,264,49.27,10250,88.92,29,43,817,16,0
+Prithvi Shaw,Batsman,Right-hand bat,2020-2020,3,3,0,84,40,28,82,102.43,0,0,12,2,0
+Shubman Gill,Batsman,Right-hand bat,2019-2020,3,3,0,49,33,16.33,71,69.01,0,0,5,1,0
+Shardul Thakur,Bowler,Right-hand bat,2017-2020,12,6,2,77,22*,19.25,53,145.28,0,0,8,0,0
+Ajinkya Rahane,Batsman,Right-hand bat,2017-2021,90,87,3,2962,111,35.26,3767,78.63,3,24,293,16,0
+Cheteshwar Pujara,Batsman,Right-hand bat,2017-2022,5,5,0,51,27,10.2,130,39.23,0,0,4,23,0
+Wriddhiman Saha,Wicket Keeper Batsman,Right-hand bat,2017-2023,9,5,2,41,16,13.66,56,73.21,0,0,5,12,12
+Ravichandran Ashwin,Bowling-allrounder,Right-hand bat,2017-2024,111,61,19,675,65,16.07,776,86.98,0,1,59,0,0

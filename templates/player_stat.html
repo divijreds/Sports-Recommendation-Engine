@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'main.css') }}">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="icon" href="{{ url_for('static', filename = 'favicon.ico') }}" type="image/png" sizes="32x32">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>
+            {{ player_name }}
+        </title>
+        
+    </head>
+    
+    <body style="background-color: #1a1a1a;">
+        <div class = "container-fluid" style="height: 100%;">
+            <div class="content-section">
+                <h2 style="color: white; margin-top: 50px; margin-bottom: 30px; text-align: center;">Performance Statistics of "{{ player_name }}"</h2>
+                <p style="color: white; text-align: center;">*Right Click on any image and select "Open image in new tab" to observe image clearly</p>
+                <div class="w3-row w3-container" style="margin-top: 3%;">
+                    <div class="w3-half w3-container">
+                        <div class="w3-topbar w3-border-red">
+                            <img src="static/stat/{{ player_name }}_1.png" style="width:100%; height: auto;">
+                            <h5 style="color: white; text-align: center; margin-top: 7px; margin-bottom: 7px;">{{ description.desc_1 }}</h5>
+                        </div>
+                    </div>
+                    <div class="w3-half w3-container">
+                        <div class="w3-topbar w3-border-red">
+                            <img src="static/stat/{{ player_name }}_2.png" style="width:100%; height: auto;">
+                            <h5 style="color: white; text-align: center; margin-top: 7px;">{{ description.desc_2 }}</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-row w3-container" style="margin-top: 3%;">
+                    <div class="w3-half w3-container">
+                        <div class="w3-topbar w3-border-red">
+                            <img src="static/stat/{{ player_name }}_3.png" style="width:100%; height: 100%;">
+                            <h5 style="color: white; text-align: center; margin-top: 7px;">{{ description.desc_3 }}</h5>
+                        </div>
+                    </div>
+                    <div class="w3-half w3-container">
+                        <div class="w3-topbar w3-border-red">
+                            <img src="static/stat/{{ player_name }}_4.png" style="width:100%; height: auto;">
+                            <h5 style="color: white; text-align: center; margin-top: 7px;">{{ description.desc_4 }}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>

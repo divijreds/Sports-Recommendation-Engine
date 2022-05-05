@@ -1,0 +1,10 @@
+Flask>=1.0.0
+cloudant==2.13.0
+pandas
+flask_wtf
+wtforms
+matplotlib
+seaborn
+xlrd
+openpyxl
+sklearn

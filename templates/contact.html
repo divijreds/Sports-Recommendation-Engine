@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block head %}
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'main.css') }}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    
+{% endblock %}
+
+{% block content %}
+    
+    <div class="csplitl cleft">
+      <h1 class="mt-4" style="color: black; font-size: 24px; margin-left: 12px; margin-bottom: 0px;"><span class="fas fa-laptop-code"></span>&nbsp;&nbsp;DEVELOPED BY...</h1><br>
+      <div class="w3-card-4" style="width:70%">
+        <header class="w3-container w3-light-grey">
+          <h3 style="font-size: 18px;"><span style="font-size: 24px;" class="fas fa-user-circle"></span>&nbsp;&nbsp;GAURAVAM MAJMUDAR</h3>
+        </header>
+        <div class="w3-container">
+          <p style="color:black;padding-top: 20px; font-size:15px;"><span style="font-size: 20px;" class="fas fa-university"></span>&nbsp;&nbsp;INSTITUTE OF COMPUTER TECHNOLOGY, GANPAT UNIVERSITY</p>
+          <hr>
+          <!--<img src="#" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">-->
+          <p style="color:black; font-size:15px;"><span class="fas fa-book-reader" style="font-size: 22px;"></span>&nbsp;&nbsp;DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING, SEM-VIII &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CSE-CBA (17162101016)</p>
+          <br>
+        </div>
+        <button style="border-radius: 2px;" id="contactbtn1" class="w3-button w3-block w3-dark-grey"><span class="fas fa-envelope" style="font-size: 22px;">&nbsp;&nbsp;Contact</span></button>
+      </div>
+      <br>
+<!------------------------------------------------------------------------------------------------------------------------------> 
+      <div class="w3-card-4" style="width:70%">
+        <header class="w3-container w3-light-grey">
+          <h3 style="font-size: 18px;"><span style="font-size: 24px;" class="fas fa-user-circle"></span>&nbsp;&nbsp;CHARNESHWAR SINGH</h3>
+        </header>
+        <div class="w3-container">
+          <p style="color:black;padding-top: 20px; font-size:15px;"><span style="font-size: 20px;" class="fas fa-university"></span>&nbsp;&nbsp;INSTITUTE OF COMPUTER TECHNOLOGY, GANPAT UNIVERSITY</p>
+          <hr>
+          <!--<img src="#" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">-->
+          <p style="color:black; font-size:15px;"><span class="fas fa-book-reader" style="font-size: 22px;"></span>&nbsp;&nbsp;DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING, SEM-VIII &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CSE-BDA (17162121004)</p>
+          <br>
+        </div>
+        <button style="border-radius: 2px;" id="contactbtn2" class="w3-button w3-block w3-dark-grey"><span class="fas fa-envelope" style="font-size: 22px;">&nbsp;&nbsp;Contact</span></button>
+      </div>
+      <br>
+<!------------------------------------------------------------------------------------------------------------------------------> 
+      <div class="w3-card-4" style="width:70%">
+        <header class="w3-container w3-light-grey">
+          <h3 style="font-size: 18px;"><span  style="font-size: 24px;" class="fas fa-user-circle"></span>&nbsp;&nbsp;DIVIJ BHUTANI</h3>
+        </header>
+        <div class="w3-container">
+          <p style="color:black;padding-top: 20px; font-size:15px;"><span style="font-size: 20px;" class="fas fa-university"></span>&nbsp;&nbsp;INSTITUTE OF COMPUTER TECHNOLOGY, GANPAT UNIVERSITY</p>
+          <hr>
+          <!--<img src="#" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">-->
+          <p style="color:black; font-size:15px;"><span class="fas fa-book-reader" style="font-size: 22px;"></span>&nbsp;&nbsp;DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING, SEM-VIII &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CSE-BDA (17162121002)</p>
+          <br>
+        </div>
+        <button style="border-radius: 2px;" id="contactbtn3" class="w3-button w3-block w3-dark-grey"><span class="fas fa-envelope" style="font-size: 22px;">&nbsp;&nbsp;Contact</span></button>
+      </div>
+      <br>
+    </div>
+
+<!------------------------------------------------------------------------------------------------------------------------------>     
+    <!--<div class = "cvertical"></div>-->
+<!------------------------------------------------------------------------------------------------------------------------------> 
+    
+    <div class="csplitr cright">
+      <img src="static/contact.svg" class="contactimg" alt="Contact Us SVG">
+      <!--<div class="centered"></div>-->
+    </div>
+<!------------------------------------------------------------------------------------------------------------------------------>    
+{% endblock content %}

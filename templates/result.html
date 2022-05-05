@@ -1,0 +1,151 @@
+{% extends "layout.html" %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'main.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <style>
+        table, th, td {
+            border: none;
+            border-collapse: collapse;
+            font-size: 18px;
+            color: white;
+            border-bottom: 1px solid gray;
+        }
+        th, td {
+            padding: 10px 60px;
+        }
+        th {
+            text-align: left;
+        }
+        .data {
+            color: white;
+        }
+        h3, h4 {
+            color: white;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        a{
+            color: white;
+        }
+        a:hover{
+            color: #ff3333;
+            text-decoration: none;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    {% if method == 'm1' %}
+        <div class="content-section">
+            <h3>Recommended Playing XI for next match on "{{ ptype }}" pitch</h3>
+            <table>
+                <tr>
+                    <th>Sr.</th>
+                    <th>Player</th>
+                    <th>Role</th>
+                    <th>Batting Average</th>
+                    <th>Batting Strike Rate</th>
+                    <th>Bowling Average</th>
+                    <th>Bowling Strike Rate</th>
+                </tr>
+                {% for i in range(players.shape[0]) %}
+                    <tr>
+                        <td>{{ i + 1 }}</td>
+                        <td id = 'pname'><a href = "{{ url_for('stats', player = players.iloc[i][0], role = players.iloc[i][1], ptype = ptype, method = method) }}">{{ players.iloc[i][0] }}</a></td>
+                        <td>{{ players.iloc[i][1] }}</td>
+                        <td>{{ players.iloc[i][6] }}</td>
+                        <td>{{ players.iloc[i][7] }}</td>
+                        <td>{{ players.iloc[i][10] }}</td>
+                        <td>{{ players.iloc[i][12] }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <br><br><br>
+        
+         <!--{% for table in tables %}
+            {{cols[loop.index]}}
+            {{ table|safe }}
+         {% endfor %}-->
+            <h3  style="margin-top: 2%;">Recommended Substitute Players for next match on "{{ ptype }}" pitch</h3>
+            <table>
+                <tr>
+                    <th>Sr.</th>
+                    <th>Player</th>
+                    <th>Role</th>
+                    <th>Batting Average</th>
+                    <th>Batting Strike Rate</th>
+                    <th>Bowling Average</th>
+                    <th>Bowling Strike Rate</th>
+                </tr>
+                {% for i in range(sub_players.shape[0]) %}
+                    <tr>
+                        <td>{{ i + 1 }}</td>
+                        <td id = 'pname'><a href = "{{ url_for('stats', player = sub_players.iloc[i][0], role = sub_players.iloc[i][1], ptype = ptype, method = method) }}">{{ sub_players.iloc[i][0] }}</a></td>
+                        <td>{{ sub_players.iloc[i][1] }}</td>
+                        <td>{{ sub_players.iloc[i][6] }}</td>
+                        <td>{{ sub_players.iloc[i][7] }}</td>
+                        <td>{{ sub_players.iloc[i][10] }}</td>
+                        <td>{{ sub_players.iloc[i][12] }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <h4 class = "text-muted" style="margin-top: 2%;">*Click on the player names to see their performance statistics<br><br>(Right click on player names and select 'Open link in new tab' to view seperately)</h4>
+        </div>
+
+    {% else %}
+        <div class="content-section">
+            <h3>Recommended Playing XI for next match on "{{ ptype }}" pitch</h3>
+            <table>
+                <tr>
+                    <th>Sr.</th>
+                    <th>Player</th>
+                    <!--<th>Role</th>-->
+                    <th>Batting Average</th>
+                    <th>Batting Strike Rate</th>
+                    <th>Bowling Average</th>
+                    <th>Bowling Strike Rate</th>
+                </tr>
+                {% for i in range(players.shape[0]) %}
+                    <tr>
+                        <td>{{ i + 1 }}</td>
+                        <td id = 'pname'><a href = "{{ url_for('stats', player = players.iloc[i][0], role = 'None', ptype = ptype, method = method) }}">{{ players.iloc[i][0] }}</a></td>
+                        <!--<td>{{ players.iloc[i][1] }}</td>-->
+                        <td>{{ players.iloc[i][1] }}</td>
+                        <td>{{ players.iloc[i][2] }}</td>
+                        <td>{{ players.iloc[i][23] }}</td>
+                        <td>{{ players.iloc[i][24] }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <br><br><br>
+        
+            <h3  style="margin-top: 2%;">Recommended Substitute Players for next match on "{{ ptype }}" pitch</h3>
+            <table>
+                <tr>
+                    <th>Sr.</th>
+                    <th>Player</th>
+                    <!--<th>Role</th>-->
+                    <th>Batting Average</th>
+                    <th>Batting Strike Rate</th>
+                    <th>Bowling Average</th>
+                    <th>Bowling Strike Rate</th>
+                </tr>
+                {% for i in range(sub_players.shape[0]) %}
+                    <tr>
+                        <td>{{ i + 1 }}</td>
+                        <td id = 'pname'><a href = "{{ url_for('stats', player = sub_players.iloc[i][0], role = 'None', ptype = ptype, method = method) }}">{{ sub_players.iloc[i][0] }}</a></td>
+                        <!--<td>{{ sub_players.iloc[i][1] }}</td>-->
+                        <td>{{ sub_players.iloc[i][1] }}</td>
+                        <td>{{ sub_players.iloc[i][2] }}</td>
+                        <td>{{ sub_players.iloc[i][23] }}</td>
+                        <td>{{ sub_players.iloc[i][24] }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <h4 class = "text-muted" style="margin-top: 2%;">*Click on the player names to see their performance statistics<br><br>(Right click on player names and select 'Open link in new tab' to view seperately)</h4>
+        </div>
+    {% endif %}
+
+{% endblock content %}

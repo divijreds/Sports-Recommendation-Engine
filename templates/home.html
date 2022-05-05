@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'main.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+{% endblock %}
+
+{% block content %}
+  <div class="w3-display-container" style="margin-bottom:40px;">
+    <div class="w3-display-bottomleft w3-container w3-black w3-hover-red w3-hide-small" style="bottom:10%;opacity:0.7;width:40%">
+      <h2><b>Welcome To<br>Sports Recommendation System for Cricket</b></h2>
+    </div>
+    <a href="#"><input class="recbtn" data-toggle="modal" data-target="#myModal" type="submit" value="Start Recommendation"></a>
+  </div>
+
+  <div class="w3-row w3-container" style="display: flex;">
+    <div class="w3-half w3-container" style="margin-left: 25px;">
+      <div class="w3-panel w3-red w3-round-large">
+        <p style="margin-top: 14px; text-align: justify;">
+          <span style="font-weight: bold; font-size: 18px;">Recommendation Logic 1: Normal Recommendation</span><br><br> Recommendation Engine for Cricket or R.E.F.C is a web platform 
+          that uses two different recommendation logics to recommend a team of 11 players most suitable for the next match.
+          Recommendation Engines are applications or softwares that assess the existing / past data and provide a 
+          recommendation or suggestion for the future choices. Type of pitch, type of weather is asked to the user which is 
+          used by this method to recommend the players by using a simple logic derived using pure performance statistics.
+        </p>
+      </div>
+    </div>
+
+    <div class="w3-half w3-container" style="margin-right: -25px;">
+      <div class="w3-panel w3-red w3-round-large">
+        <p style="margin-top: 14px; text-align: justify;">
+            <span style="font-weight: bold; font-size: 18px;">Recommendation Logic 2: K-means Recommendation</span><br><br> 
+            This is the second method that the user can use for recommendation of players. Like first method that is mentioned here,
+            this method also takes choices of type of pitch and type of weather and provides recommendation, but this method uses 
+            a mathematical model called k-means clustering to calculate groups of candidates by categories or other performance 
+            factors and then provides recommendation to the user. Both the methods are efficient but the usability is user dependent.
+            The user can select type of recommendation method while choosing the match conditions.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"><span style="font-size: 22px;" class="fas fa-sliders-h"></span>&nbsp;&nbsp;SET MATCH CONDITIONS</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <form method="POST" action = "{{ url_for('home') }}">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+              <div class="form-group">
+                {{ form.pitch.label(class="form-control-label") }}
+                {% if form.pitch.errors %}
+                  {{ form.pitch(class="form-control form-control-lg is-invalid") }}
+                  <div class="invalid-feedback">
+                    {% for error in form.pitch.errors %}
+                      <span style="color: red;">{{ error }}</span>
+                    {% endfor %}
+                  </div>
+                {% else %}
+                  {{ form.pitch(class="form-control form-control-lg") }}
+                {% endif %}
+              </div>
+
+              <div class="form-group">
+                {{ form.algorithm.label(class="form-control-label") }}
+                {% if form.algorithm.errors %}
+                  {{ form.algorithm(class="form-control form-control-lg is-invalid") }}
+                  <div class="invalid-feedback">
+                    {% for error in form.algorithm.errors %}
+                      <span style="color: red;">{{ error }}</span>
+                    {% endfor %}
+                  </div>
+                {% else %}
+                  {{ form.algorithm(class="form-control form-control-lg") }}
+                {% endif %}
+              </div>
+
+            </fieldset>
+            <div class="form-group">
+              {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+          </form>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+{% endblock content %}

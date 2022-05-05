@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'main.css') }}">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+{% endblock %}
+
+{% block content %}
+
+    <div class="con_splitl con_left">
+        <img src="static/conditions.svg" class="conimg" alt="Pitch conditions SVG">
+    </div>
+<!------------------------------------------------------------------------------------------------------------------------------> 
+    <!--<div class = "avertical"></div>-->
+<!------------------------------------------------------------------------------------------------------------------------------> 
+    <div class="con_splitr con_right">
+        <!--<div class="centered"></div>-->
+        <h1 class="mt-4" style="color: black; font-size: 28px;"><span style="font-size: 28px;" class="fas fa-users"></span>&nbsp;&nbsp;SET MATCH CONDITIONS...</h1><br>
+        <div class="w3-panel w3-grey w3-round-large">
+            <!--<form method="POST" action="">
+                {{ form.hidden_tag() }}
+                <fieldset class="form-group">
+                  <legend class="border-bottom mb-4">Select Type of Pitch</legend>
+                  <div class="form-group">
+                    {{ form.pitch.label(class="form-control-label") }}
+                    {% if form.pitch.errors %}
+                      {{ form.pitch(class="form-control form-control-lg is-invalid") }}
+                      <div class="invalid-feedback">
+                        {% for error in form.pitch.errors %}
+                          <span style="color: red;">{{ error }}</span>
+                        {% endfor %}
+                      </div>
+                    {% else %}
+                      {{ form.pitch(class="form-control form-control-lg") }}
+                    {% endif %}
+                  </div>
+                </fieldset>
+                <div class="form-group">
+                  {{ form.submit(class="btn btn-outline-info") }}
+                </div>
+              </form>
+            -->
+        </div>
+    </div>
+<!------------------------------------------------------------------------------------------------------------------------------>
+{% endblock content %}

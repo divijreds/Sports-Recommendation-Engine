@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'main.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <title>{{ player_name }}</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="content-section">
+    <h2 style="color: white; margin-bottom: 30px; text-align: center;">Performance Statistics of "{{ player_name }}"</h2>
+
+<!---------------------------------------------------------------------------------------------------------------------------------->  
+    <div class="w3-row w3-container" style="margin-top: 3%;">
+        <div class="w3-half w3-container">
+            <div class="w3-topbar w3-border-red">
+                <img src="static/stat/{{ player_name }}_1.png" style="width:100%; height: fit-content;">
+                <h2>50s and 100s</h2>
+                <p>Shows centuries and half-centuries scored per year</p>
+                <p class = "text-muted">Horizontal(Year from 2008-2020) and Vertical(50s and 100s)</p>
+            </div>
+        </div>
+        <!-------------------------------------------------------------------------------------------------------------------------->
+        <div class="w3-half w3-container">
+            <div class="w3-topbar w3-border-red">
+                <img src="static/stat/{{ player_name }}_2.png" style="width:100%; height: fit-content;">
+                <h2>Innings per Year</h2>
+                <p>Shows regularity of playing through out the year</p>
+                <p class = "text-muted">Horizontal(Number of innings played) and Vertical(Year from 2008-2020)</p>    
+            </div>
+        </div>
+    </div>
+<!---------------------------------------------------------------------------------------------------------------------------------->  
+    <div class="w3-row w3-container" style="margin-top: 3%;">
+        <div class="w3-half w3-container">
+            <div class="w3-topbar w3-border-red" style="width: 95%;">
+               
+                <h2>Average per Year</h2>
+                <p>Shows consistency in batting through out these years </p>
+                <p class = "text-muted">Pie chart showing average specific to the years</p>
+            </div>
+        </div>
+        <!-------------------------------------------------------------------------------------------------------------------------->
+        <div class="w3-half w3-container">
+            <div class="w3-topbar w3-border-red">
+                
+                <h2>Runs per Year</h2>
+                <p>Shows batting performance consistency and progress</p>
+                <p class = "text-muted">Horizontal(Year from 2008-2020) and Vertical(Total runs scored)</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
